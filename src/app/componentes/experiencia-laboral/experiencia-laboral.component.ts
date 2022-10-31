@@ -1,0 +1,50 @@
+import { Component, OnInit } from '@angular/core';
+import { Experiencia } from 'src/app/model/experiencia.model';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+import { TokenService } from 'src/app/servicios/token.service';
+
+
+@Component({
+  selector: 'app-experiencia-laboral',
+  templateUrl: './experiencia-laboral.component.html',
+  styleUrls: ['./experiencia-laboral.component.css']
+})
+export class ExperienciaLaboralComponent implements OnInit {
+
+  experiencia: Experiencia [] = [];
+
+  constructor(private experienciaService: ExperienciaService, private tokenService: TokenService) { }
+
+  isLogged = false;
+
+  ngOnInit(): void {
+
+    this.cargarExperiencia();
+    
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    };
+  }
+
+  cargarExperiencia():void{
+    this.experienciaService.obtenerExperiencia()
+    .subscribe(data => {this.experiencia = data});
+  }
+
+  borrar(id?: number){
+    if(id != undefined){
+      this.experienciaService.delete(id).subscribe(data =>
+        {
+          this.cargarExperiencia();
+        }, err=> {
+          alert('No se pudo borrar la experiencia');
+        })
+    }
+  }
+}
+
+
+
+  

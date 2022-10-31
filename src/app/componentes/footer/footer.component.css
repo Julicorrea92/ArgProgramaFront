@@ -1,0 +1,44 @@
+.tit-cabecera{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin:  0.5em;
+    margin-top: 0.25em;
+    background-color: rgb(93, 56, 133);
+    border-radius: 20px;
+    border: solid;
+}
+
+.tit-cabecera h2{
+
+   font-size: 2em;
+}
+
+
+.foot {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(93, 56, 133);
+    border-radius: 20px;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin: 0.5em;
+    margin-top: 0.2em;  
+    border: solid;
+    
+}
+
+.fin p{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+

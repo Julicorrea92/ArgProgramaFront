@@ -1,0 +1,38 @@
+<header>
+    <nav>
+        <div class="cont-navi">
+            <div class="container-fluid">
+                <div class="row justify-content-start">                    
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" id="logo" >
+                        <a href="https://argentinaprograma.inti.gob.ar/" alt="Argentina Programa" target="_blank" rel="noopener noreferrer"><img src="../../../assets/logo.png" id="ocultar"><h4>Argentina Programa</h4></a>
+                    </div>
+                    <div id="bien" class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <h1>BIENVENIDOS</h1>
+                        <!-- <a href="#"><h3>Inicia Sesión</h3></a> -->
+                        <button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Iniciar Sesión</button>
+                        <button type="button" class="btn btn-outline-dark" (click)="onLogOut()"*ngIf="isLogged">SALIR</button>
+                    </div>          
+
+
+                    <div id="redes" class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">            
+                        <a id="linkedin" class="logos" href="https://www.linkedin.com/in/julian-correa-/" target="_blank" rel="noopener noreferrer"><img src="../../../assets/linkedin.png"></a>
+                        <a id="git" class="logos" href="https://github.com/Julicorrea92" target="_blank" rel="noopener noreferrer"><img src="../../../assets/signo-de-github.png"></a>                                    
+                        <!-- <a id="user" class="logos" href="" target="_blank" rel="noopener noreferrer"><img src="../../../assets/user.png"></a> -->                                    
+                        <!-- <a id="mail" class="logos" href="" target="_blank" rel="noopener noreferrer"><img src="../../../assets/email.png"></a> -->                                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="cont-titulo">  
+            <div class="enc-0">
+                <img id="im-portada" src="../../../assets/pexels-photo-546819mod.png" alt="Foto de Portada"> 
+            </div>   
+            <div class="enc-1">        
+                    <h1>PORTFOLIO DESARROLLADOR </h1>
+                    <h1> FULL STACK jr.</h1>
+                    <h1>#YoProgramo</h1>                    
+            </div>
+        </div>
+</header>

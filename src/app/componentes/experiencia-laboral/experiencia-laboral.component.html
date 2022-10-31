@@ -1,0 +1,53 @@
+<section>
+    <div class="tit-cabecera">
+        <h2>EXPERIENCIA LABORAL</h2>
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged" id="btnExp">
+            Nueva Experiencia
+        </button>
+    </div>
+    <div class="contiene-trabajos">
+        <div class="trabajo">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+
+                    
+                    
+                    <div>
+                        <div class="col-lg-12">
+                            <table class="table">
+                                <div>
+                                    <div *ngFor="let Experiencia of experiencia">
+                                        <h2>{{Experiencia.puesto}}</h2>
+                                        <h3>{{Experiencia.empresa}}</h3>
+                                        <p>{{Experiencia.periodo}}</p>
+                                        <p>{{Experiencia.lugar}}</p>
+                                        <p>{{Experiencia.tareas}}</p>
+                                        <td *ngIf="isLogged">
+                                            <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                                                <i class="bi bi-pencil-square"></i>EDITAR
+                                            </button>
+                                        </td>
+                                        <td *ngIf="isLogged">
+                                            <button class="btn btn-light" (click)="borrar(Experiencia.id)">
+                                                <i class="bi bi-trash3"></i>BORRAR
+                                            </button>
+                                        </td>
+                                    </div>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!--<div>
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-2 offset-lg-1 col-xl-2 offset-lg-1">
+                    <img [src]="experiencia.imgDes" alt="Imagen de empresa" class="panel">
+
+                    VER COMO INCORPORAR IMAGENES A LA EXPERIENCIA
+
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+<div class="container" *ngIf="expLab">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                
+                <div class="form-group">
+                    <label for="puesto">Nombre del cargo/función que ocupó</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="expLab.puesto" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="empresa">Indique nombre de empresa o si trabajo de manera independiente</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="expLab.empresa" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="periodo">Duración en el cargo. Ingresar mes y año de inicio seguido de mes y año de finalización.
+                    </label>
+                    <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="expLab.periodo" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="lugar">Lugar/Ciudad</label>
+                    <input type="text" class="form-control" id="lugar" name="lugar" [(ngModel)]="expLab.lugar" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="tareas">Tareas realizadas</label>
+                    <input type="text" class="form-control" id="tareas" name="tareas" [(ngModel)]="expLab.tareas" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="imgDes">Logo de la empresa.</label>
+                    <input type="text" class="form-control" id="imgDes" name="imgDes" [(ngModel)]="expLab.imgDes" required>
+                </div>
+
+                <button class="btn btn-light">Actualizar Experiencia</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+ <!-- QUEDA PENDIENTE HACER UN CCS PARA EL FORMULARIO -->

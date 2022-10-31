@@ -1,0 +1,244 @@
+header{
+    font-family: Helvetica, Verdana, Tahoma, sans-serif;
+}
+
+.cont-navi{
+
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+    margin:  0.5em;
+    background-color: rgb(142, 103, 173);
+    border-radius: 20px;
+    border: solid;
+}
+
+#logo img{
+
+    width: 125px;
+    border-radius: 15px;
+    position: relative;
+    right: 10px;
+}
+
+#logo a{
+
+    display: inline-flex;
+    font-size: 1.25em;
+    color:black;
+    line-height: 1.6em;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+#bien{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#bien a{
+
+    text-decoration: none;
+    color:black;
+    
+}
+
+#redes{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+.logos img{
+
+    width: 3.5em;
+}
+
+.cont-titulo{
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.enc-0{
+
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;     
+}  
+
+#im-portada{
+    
+    width: 99%;
+    border-radius: 20px;  
+} 
+.enc-1{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    font-weight: bold;
+    color:white;
+    position: absolute; 
+}
+
+
+#linkedin{
+    position: relative;
+    right: 26px;
+}
+
+#git{
+    position: relative;
+    right: 18px;
+}
+#user{
+    position: relative;
+    right: 12px;
+}
+#mail{
+    position: relative;
+    right: 6px;
+}
+
+
+
+@media(min-width: 577px) and (max-width:991px){
+
+    #logo{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #redes{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 15dpx;
+    }
+
+    #bien{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        
+    }
+
+    .logos img{
+
+        width: 3em;
+    }
+
+    #bien h1{
+
+        font-size: 2em;
+    }
+
+    #bien h3{
+ 
+    font-size: 1.5em;
+
+    }
+    #ocultar{
+        display:none;
+     }
+
+     #linkedin{
+        position: relative;
+        right: 26px;
+    }
+    
+    #git{
+        position: relative;
+        right: 18px;
+    }
+    #user{
+        position: relative;
+        right: 12px;
+    }
+    #mail{
+        position: relative;
+        right: 6px;
+    }
+
+
+
+}
+
+@media(max-width: 576px){
+
+    #logo{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #redes{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 15px;
+    }
+
+    #bien{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .logos img{
+
+        width: 3em;
+    }
+
+    #bien h1{
+
+        font-size: 2em;
+    }
+
+    #bien h3{
+ 
+    font-size: 1.5em;
+
+    }
+    #ocultar{
+        display:none;
+     }
+
+     #linkedin{
+        position: relative;
+        right: 24px;
+    }
+    
+    #git{
+        position: relative;
+        right: 18px;
+    }
+    #user{
+        position: relative;
+        right: 12px;
+    }
+    #mail{
+        position: relative;
+        right: 6px;
+    }
+}

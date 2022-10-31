@@ -1,0 +1,127 @@
+.tit-cabecera{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin:  0.5em;
+    background-color: rgb(93, 56, 133);
+    border-radius: 20px;
+    border: solid;
+}
+
+.acerca{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(142, 103, 173);
+    border-radius: 20px;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin: 0.5em;  
+    border: solid;
+}
+
+.acercatxt{
+
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 1.2em;
+}
+
+.acercatxt h2{
+
+    font-size: 1.5em;
+    
+}
+
+.acercatxt h3{
+
+    text-decoration: underline;
+}
+
+
+#listanav{
+
+    list-style: none;
+    color:black;
+    line-height: 1.6em; 
+    font-size: .9em;
+}
+
+@media(min-width: 992px){
+
+    #fotoperfil{
+
+        height: 250px;
+        width: 250px;
+        border-radius: 16px;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;
+        align-items: center;
+    }
+
+}
+
+@media(min-width: 577px) and (max-width:991px){
+
+    #centrar{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #fotoperfil{
+
+        
+        height: 250px;
+        width: 250px;
+        border-radius: 16px;
+        margin-top: 0.5em;
+        margin-bottom: 0.3em;         
+    }
+    .acercatxt{
+
+        text-align:left;
+        font-size: 1.2em;
+    }
+
+    .acercatxt h3{
+
+        font-size: 1.2em;
+        text-decoration: underline;
+    }
+
+
+
+}
+
+@media(max-width: 576px){
+
+    #fotoperfil{
+
+       
+        width: 100%;
+        border-radius: 16px;
+        margin-top: 1em;
+        margin-bottom: 0.3em;
+
+    }
+
+    .acercatxt{
+
+        text-align:left;
+        font-size: 1em;
+    }
+
+    .acercatxt h3{
+
+        font-size: 1.2em;
+        text-decoration: underline;
+    }
+}

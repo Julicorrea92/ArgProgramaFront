@@ -1,0 +1,202 @@
+<section>
+    <div class="tit-cabecera">
+        <h2>HARD & SOFT SKILLS</h2>
+
+        <div>
+            <button type="button" routerLink="/nuevaskill" class="btn btn-dark" *ngIf="isLogged" id="btnExp">
+                Nueva Skill
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid" class="hab">
+        <div class="row">
+            <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3>Hard Skills</h3>
+            </div> -->
+
+            
+
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let skill of hardSkill">
+                <circle-progress
+                    [percent]="(skill.porcentajeHard)"
+                    [radius]="80"
+                    [title]="(skill.nombreHard)"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+
+                <td *ngIf="isLogged">
+                    <button class="btn btn-light" (click)="borrar(skill.id)">
+                        <i class="bi bi-trash3"></i>BORRAR
+                    </button>
+                </td>
+            </div>
+            <!-- <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="35"
+                    [radius]="80"
+                    [title]="'Bootsrap'"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Frontend'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="35"
+                    [radius]="80"
+                    [title]="'TypeScript'"
+                    [titleColor]="'#000000'"
+                    [titleFontSize]="'20'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Frontend/Backend'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="25"
+                    [radius]="80"
+                    [title]="'Javascript'"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Frontend/Backend'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="30"
+                    [radius]="80"
+                    [title]="'Angular'"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Frontend/Backend'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="10"
+                    [radius]="80"
+                    [title]="'MySql'"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Base de datos'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+            <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="40"
+                    [radius]="80"
+                    [title]="'GitHub'"
+                    [titleColor]="'#000000'"
+                    [showUnits]="false"
+                    [showSubtitle]="true"
+                    [subtitle]="'Repositorio'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div> -->
+
+            <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3>Soft Skills</h3>
+            </div>
+             <div class="text-center col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <circle-progress
+                    [percent]="80"
+                    [radius]="80"
+                    [title]="'Comunicación'"
+                    [titleColor]="'#000000'"
+                    [titleFontSize]="'16'"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [subtitle]="'Frontend'"
+                    [subtitleFontSize]="'16'"
+                    [subtitleColor]="'#000000'"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#ffffff'"
+                    [innerStrokeColor]="'#562f7a'"
+                    [innerStrokeWidth]="'6'"
+                    [outerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="550">
+                </circle-progress>
+            </div>
+             -->          
+        </div>
+    </div>
+</section>

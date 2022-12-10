@@ -8,8 +8,11 @@ import { Educacion } from '../model/formacion-academica';
 })
 export class EducacionService {
 
-  urlEdu = 'https://back-portfoliocorreajulian.herokuapp.com/educacion/'; //URL Heroku
-  //urlEdu = 'http://localhost:8080/educacion/'; //url local
+  urlEdu = 'https://portfoliocorreajulian-julicorrea92.koyeb.app/educacion/'//URL Koyeb
+
+//'https://back-portfoliocorreajulian.herokuapp.com/educacion/'; //URL Heroku
+
+//urlEdu = 'http://localhost:8080/educacion/'; //url local
 
   constructor(private httpClient: HttpClient) { }
 

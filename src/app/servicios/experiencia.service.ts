@@ -8,8 +8,11 @@ import { Experiencia } from '../model/experiencia.model';
 })
 export class ExperienciaService {
   
-  expUrl: string ='https://back-portfoliocorreajulian.herokuapp.com/explab/'; //URL Heroku
-    //expUrl: string = 'http://localhost:8080/explab/'; //url local
+  expUrl: string ='https://portfoliocorreajulian-julicorrea92.koyeb.app/explab/' //URL Koyeb
+
+// 'https://back-portfoliocorreajulian.herokuapp.com/explab/'; //URL Heroku
+
+//expUrl: string = 'http://localhost:8080/explab/'; //url local
   
     constructor(private httpClient: HttpClient) {}
   

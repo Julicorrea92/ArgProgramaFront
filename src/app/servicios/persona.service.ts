@@ -9,8 +9,11 @@ import { Persona } from '../model/persona.model';
 })
 export class PersonaService {
 
-  url: string = 'https://back-portfoliocorreajulian.herokuapp.com/persona/';// URL Heroku
-  //url: string = 'http://localhost:8080/persona/'; url local
+  url: string = 'https://portfoliocorreajulian-julicorrea92.koyeb.app/persona/'// URL Koyeb
+  
+//'https://back-portfoliocorreajulian.herokuapp.com/persona/';// URL Heroku
+
+//url: string = 'http://localhost:8080/persona/'; url local
 
   constructor(private http: HttpClient) {}
 

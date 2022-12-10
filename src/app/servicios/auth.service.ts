@@ -10,9 +10,11 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL = 'https://back-portfoliocorreajulian.herokuapp.com/auth';//URL Heroku
+  authURL = 'https://portfoliocorreajulian-julicorrea92.koyeb.app/auth'// URL Koyeb
   
-  //authURL = 'http://localhost:8080/auth'; //url local
+//'https://back-portfoliocorreajulian.herokuapp.com/auth';//URL Heroku
+  
+//authURL = 'http://localhost:8080/auth'; //url local
  
 
   constructor(private httpClient: HttpClient) { }

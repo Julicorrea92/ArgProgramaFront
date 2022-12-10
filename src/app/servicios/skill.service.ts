@@ -9,8 +9,11 @@ import { softSkill } from '../model/skill';
 })
 export class SkillService {
 
-  skillUrl: string = 'https://back-portfoliocorreajulian.herokuapp.com/skills/'; //URL Heroku
-  //skillUrl: string = 'http://localhost:8080/skills/'; //url local
+  skillUrl: string = 'https://portfoliocorreajulian-julicorrea92.koyeb.app/skills/'// URL Koyeb
+
+//'https://back-portfoliocorreajulian.herokuapp.com/skills/'; //URL Heroku
+
+//skillUrl: string = 'http://localhost:8080/skills/'; //url local
 
   constructor(private httpClient: HttpClient) { }
 

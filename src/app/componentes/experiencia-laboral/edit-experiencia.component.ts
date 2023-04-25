@@ -13,29 +13,11 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 export class EditExperienciaComponent implements OnInit {
   //experienciaList: Experiencia[] = [];
 
-  expLab: Experiencia = null;
-  //experienciaForm: FormGroup;
-
-  /* id: string = ''
-  puesto: string = '';
-  empresa: string = '';
-  periodo: string = '';
-  lugar: string = '';
-  tareas: string = '';
-  imgDes: string = ''; */
+  expLab: Experiencia 
+  
 
   constructor(private experienciaService: ExperienciaService, private activatedRouter: ActivatedRoute, private router: Router/* , private formBuilder : FormBuilder */) {
 
-
-    /*  this.experienciaForm=this.formBuilder.group({
-       id:[''],
-       empresa: ['', [Validators.required]],
-       periodo: ['', [Validators.required]],
-       lugar: ['', [Validators.required]],
-       tareas: ['', [Validators.required]],
-       imgDes: ['', [Validators.required]]
- 
-     }) */
   }
 
   ngOnInit(): void {
@@ -49,43 +31,27 @@ export class EditExperienciaComponent implements OnInit {
       }
     )
   }
+  
 
-  //Hay algo que no deja entrar a la funcion onUpdate. 
-  //Va directo al error. Averiguar como solucionarlo.
-
-  onUpdate(): void {
-    console.log("estoy en la funcion");
-
+   ///FUNCIONANDO -> ARREGLAR EN LOS DEMAS
+   onUpdate() {
+    //console.log("estoy en la funcion");
     const id = this.activatedRouter.snapshot.params['id'];
-    console.log("El id capturado es " + `${id}`);
+    //console.log("El id capturado es " + `${id}`);
     //if (id == this.id)
-    this.experienciaService.editar(id, this.expLab).subscribe(
+    this.experienciaService.save(this.expLab).subscribe(
       data => {
-
-          alert('Experiencia añadida');
-          this.router.navigate(['']);
-        },
-        err => {
-          alert('Falló la creación');
-          this.router.navigate(['']);
-        }
-      )
+        //console.log("Ingreso en data añadir " + `${id}`);
+        alert('Experiencia editada');
+        this.router.navigate(['']);
+      },
+      err => {
+        alert('Falló la edición');
+        /* //this.router.navigate(['']); */
+      }
+    )
   }
-
 
 }
 
-/* let experiencia:Experiencia = this.experienciaList[id];
-this.loadForm(experiencia); */
-
-/* private loadForm(experiencia : Experiencia){
-  this.experienciaForm.setValue({
-    id: experiencia.id,
-    empresa: experiencia.empresa,
-    periodo: experiencia.periodo,
-    lugar: experiencia.lugar,
-    tareas: experiencia.tareas,
-    imgDes: experiencia.imgDes
-  })
-} */
 

@@ -10,7 +10,7 @@ import { EducacionService } from 'src/app/servicios/formacion-academica.service'
 })
 export class EditFormacionComponent implements OnInit {
 
-  educacion: Educacion =null;
+  educacion: Educacion;
 
   constructor(private edService: EducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
@@ -25,21 +25,24 @@ export class EditFormacionComponent implements OnInit {
       }
     )
   }
-//Al igual que en experiencia, hay algo que no deja entrar a la funcion onUpdate. 
-//Va directo al error. Averiguar como solucionarlo 
 
-
-  onUpdate():void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.edService.update(id, this.educacion).subscribe(
-      data=>{
-        this.router.navigate(['']);
-      }, err =>{
-        alert('Error al modificar la educación');
-        this.router.navigate(['']);
-      }
-    )
-
-  }
+///FUNCIONANDO -> ARREGLAR EN LOS DEMAS!
+ onUpdate() {
+  //console.log("estoy en la funcion");
+  const id = this.activatedRouter.snapshot.params['id'];
+  //console.log("El id capturado es " + `${id}`);
+  //if (id == this.id)
+  this.edService.save(this.educacion).subscribe(
+    data => {
+      //console.log("Ingreso en data añadir " + `${id}`);
+      alert('Experiencia editada');
+      this.router.navigate(['']);
+    },
+    err => {
+      alert('Falló la edición');
+      /* //this.router.navigate(['']); */
+    }
+  )
+}
 
 }

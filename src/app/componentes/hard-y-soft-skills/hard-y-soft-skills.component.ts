@@ -50,26 +50,4 @@ export class HardYSoftSkillsComponent implements OnInit {
       )
     }
   }
-
-
-
-/*   cargarSkills2():void{
-    this.skillService2.obtenerSkills2().subscribe(
-      data=>{
-        this.softSkill = data;
-      }
-    );
-  }
-
-  borrar2(id: number){
-    if(id != undefined){
-      this.skillService.delete(id).subscribe(
-        data=> {
-          this.cargarSkills();
-        }, err => {
-          alert('No se pudo cargar skill')
-        }
-      )
-    }
-  } */
 }

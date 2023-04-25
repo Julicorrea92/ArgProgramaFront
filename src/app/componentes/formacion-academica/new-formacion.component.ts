@@ -23,7 +23,7 @@ export class NewFormacionComponent implements OnInit {
   onCreate():void{
 
     const eduacion = new Educacion(this.cursos, this.carreraDeGrado, this.educacionSecundaria);
-    this.edService.new(eduacion).subscribe(
+    this.edService.save(eduacion).subscribe(
       data=>{
         alert('Educacion creada correctamente');
         this.router.navigate(['']);

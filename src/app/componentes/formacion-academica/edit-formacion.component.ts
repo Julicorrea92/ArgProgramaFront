@@ -35,7 +35,7 @@ export class EditFormacionComponent implements OnInit {
   this.edService.save(this.educacion).subscribe(
     data => {
       //console.log("Ingreso en data añadir " + `${id}`);
-      alert('Experiencia editada');
+      alert('Educación editada');
       this.router.navigate(['']);
     },
     err => {
